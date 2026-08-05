@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://supershockmecanico.shop/sitemap.xml

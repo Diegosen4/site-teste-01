@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centro Automotivo em Cabo Frio | Supershocke</title>
+    <meta name="description" content="Procurando oficina mecânica e centro automotivo em Cabo Frio? A Supershocke oferece mecânica, elétrica e lavagem com garantia e agilidade. Agende já!">
+    
+    <link rel="canonical" href="https://supershockmecanico.shop/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Centro Automotivo em Cabo Frio | Supershocke">
+    <meta property="og:description" content="Procurando oficina mecânica e centro automotivo em Cabo Frio? A Supershocke oferece mecânica, elétrica e lavagem com garantia e agilidade. Agende já!">
+    <meta property="og:url" content="https://supershockmecanico.shop/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://supershockmecanico.shop/assets/img/hero-bg.webp">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Centro Automotivo em Cabo Frio | Supershocke">
+    <meta name="twitter:description" content="Procurando oficina mecânica e centro automotivo em Cabo Frio? A Supershocke oferece mecânica, elétrica e lavagem com garantia e agilidade. Agende já!">
+    <meta name="twitter:image" content="https://supershockmecanico.shop/assets/img/hero-bg.webp">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0B0F19', // Muito escuro, quase preto
+                        card: '#151C2C', // Um tom levemente mais claro
+                        primary: '#FBBF24', // Amarelo vibrante (shock)
+                        primaryHover: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+        .glass-nav { 
+            background: rgba(11, 15, 25, 0.85); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #FBBF24 0%, #FDE68A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+    <!-- JSON-LD Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://supershockmecanico.shop/#organization",
+          "name": "Supershocke",
+          "url": "https://supershockmecanico.shop/",
+          "logo": "https://supershockmecanico.shop/assets/img/apple-touch-icon.png",
+          "sameAs": [
+            "https://www.instagram.com/diegosupershock"
+          ]
+        },
+        {
+          "@type": "AutoRepair",
+          "@id": "https://supershockmecanico.shop/#localbusiness",
+          "name": "Supershocke",
+          "image": "https://supershockmecanico.shop/assets/img/hero-bg.webp",
+          "url": "https://supershockmecanico.shop/",
+          "telephone": "+5522997669294",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Canário, S/N",
+            "addressLocality": "Cabo Frio",
+            "addressRegion": "RJ",
+            "addressCountry": "BR"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "07:00",
+            "closes": "17:00"
+          },
+          "priceRange": "$$",
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Cabo Frio"
+            },
+            {
+              "@type": "Place",
+              "name": "Região dos Lagos"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://supershockmecanico.shop/#website",
+          "url": "https://supershockmecanico.shop/",
+          "name": "Supershocke",
+          "publisher": {
+            "@id": "https://supershockmecanico.shop/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://supershockmecanico.shop/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Como posso agendar um serviço?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O agendamento é feito diretamente pelo nosso WhatsApp (22) 99766-9294. É rápido e prático."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quanto tempo o carro precisa ficar na oficina?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depende do serviço. No momento do diagnóstico, damos uma estimativa real do prazo para você não ter surpresas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vocês aceitam cartão?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, aceitamos as principais bandeiras de cartão para facilitar o seu pagamento."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A oficina tem garantia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, oferecemos 90 dias de garantia em todos os nossos serviços realizados."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Onde vocês ficam localizados?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Estamos na Rua Canário, S/N, atendendo toda Cabo Frio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Faz diagnóstico de elétrica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, somos especialistas em conserto de elétrica automotiva em Cabo Frio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona a lavagem automotiva?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Realizamos lavagem profissional e limpeza de estofados com produtos de alta qualidade."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vocês atendem além de Cabo Frio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, atendemos clientes de toda a Região dos Lagos que buscam manutenção de confiança."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://supershockmecanico.shop/#service-mecanica",
+          "name": "Mecânica Automotiva Geral",
+          "description": "Realizamos revisões completas e manutenções corretivas focadas na performance do seu motor e segurança. Diagnóstico preciso para você não gastar com o que não precisa.",
+          "provider": {
+            "@id": "https://supershockmecanico.shop/#localbusiness"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Cabo Frio"
+            },
+            {
+              "@type": "Place",
+              "name": "Região dos Lagos"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://supershockmecanico.shop/#service-eletrica",
+          "name": "Elétrica Veicular",
+          "description": "Problemas na bateria, alternador, luzes do painel ou chicotes elétricos? Nossa equipe de eletricistas automotivos resolve qualquer pane com agilidade.",
+          "provider": {
+            "@id": "https://supershockmecanico.shop/#localbusiness"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Cabo Frio"
+            },
+            {
+              "@type": "Place",
+              "name": "Região dos Lagos"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://supershockmecanico.shop/#service-lavagem",
+          "name": "Lavagem Automotiva Profissional",
+          "description": "Mais que uma lavagem, cuidamos da estética do seu veículo. Limpeza técnica de lataria e estofados para deixar seu carro com cara de novo.",
+          "provider": {
+            "@id": "https://supershockmecanico.shop/#localbusiness"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Cabo Frio"
+            },
+            {
+              "@type": "Place",
+              "name": "Região dos Lagos"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://supershockmecanico.shop/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://supershockmecanico.shop/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-dark text-gray-300 antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <header x-data="{ mobileMenuOpen: false, scrolled: false }" 
+            @scroll.window="scrolled = (window.pageYOffset > 20)"
+            :class="scrolled ? 'py-4 glass-nav' : 'py-6 bg-transparent'"
+            class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-2xl font-heading font-bold text-white">Super<span class="text-primary">shocke</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex gap-8 items-center font-medium">
+                <a href="#servicos" class="hover:text-primary transition-colors">Serviços</a>
+                <a href="#sobre" class="hover:text-primary transition-colors">Quem Somos</a>
+                <a href="#como-funciona" class="hover:text-primary transition-colors">Como Funciona</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contato" class="px-5 py-2.5 bg-primary text-black rounded-lg font-semibold hover:bg-primaryHover transition-all shadow-[0_0_15px_rgba(251,191,36,0.3)]">Contato</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-white focus:outline-none">
+                <svg x-show="!mobileMenuOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg x-show="mobileMenuOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 -translate-y-4"
+             @click.away="mobileMenuOpen = false"
+             class="md:hidden absolute top-full left-0 w-full glass-nav border-t border-gray-800 flex flex-col py-4 px-6 gap-4">
+            <a @click="mobileMenuOpen = false" href="#servicos" class="text-lg hover:text-primary">Serviços</a>
+            <a @click="mobileMenuOpen = false" href="#sobre" class="text-lg hover:text-primary">Quem Somos</a>
+            <a @click="mobileMenuOpen = false" href="#como-funciona" class="text-lg hover:text-primary">Como Funciona</a>
+            <a @click="mobileMenuOpen = false" href="#faq" class="text-lg hover:text-primary">FAQ</a>
+            <a @click="mobileMenuOpen = false" href="#contato" class="text-lg text-primary font-semibold">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/img/hero-bg.webp" alt="Centro Automotivo Supershocke em Cabo Frio - Oficina Mecânica e Elétrica" class="w-full h-full object-cover opacity-20" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-semibold mb-6">
+                        📍 Atendendo Cabo Frio e Região
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+                        Centro Automotivo em Cabo Frio:<br>
+                        <span class="text-gradient">Mecânica, Elétrica e Lavagem</span>
+                    </h1>
+                    <p class="text-lg lg:text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl">
+                        Deixe seu veículo em dia com quem entende de performance e cuidado. Oferecemos soluções completas em mecânica, elétrica e estética automotiva para que você rode com segurança e tranquilidade por toda a Região dos Lagos.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5522997669294" target="_blank" class="px-8 py-4 bg-primary text-black rounded-lg font-bold text-lg hover:bg-primaryHover transition-all flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:scale-105">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                            Agendar via WhatsApp
+                        </a>
+                        <a href="#servicos" class="px-8 py-4 bg-transparent border border-gray-600 text-white rounded-lg font-bold text-lg hover:bg-white/5 transition-all flex justify-center items-center">
+                            Ver serviços
+                        </a>
+                    </div>
+                    <p class="mt-6 text-gray-500 text-sm flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Atendimento rápido e profissionais especializados na Rua Canário.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Barra de Credibilidade -->
+        <section id="credibilidade" class="bg-card py-10 border-y border-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-800">
+                    <div class="px-4">
+                        <div class="text-3xl font-bold text-white mb-2 font-heading">2 Anos</div>
+                        <p class="text-sm text-gray-400">de experiência no mercado.</p>
+                    </div>
+                    <div class="px-4">
+                        <div class="text-3xl font-bold text-white mb-2 font-heading">90 Dias</div>
+                        <p class="text-sm text-gray-400">de garantia nos serviços.</p>
+                    </div>
+                    <div class="px-4">
+                        <div class="text-3xl font-bold text-white mb-2 font-heading">Ágil</div>
+                        <p class="text-sm text-gray-400">para você não perder tempo.</p>
+                    </div>
+                    <div class="px-4">
+                        <div class="text-3xl font-bold text-white mb-2 font-heading">3 Áreas</div>
+                        <p class="text-sm text-gray-400">Mecânica, elétrica e estética.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Quem Somos -->
+        <section id="sobre" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2 relative">
+                        <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+                        <img src="/assets/img/sobre.webp" alt="Equipe de mecânicos da Supershocke trabalhando em Cabo Frio" class="relative rounded-2xl shadow-2xl border border-gray-800 object-cover w-full h-[500px]" loading="lazy">
+                        <div class="absolute -bottom-6 -right-6 bg-card border border-gray-700 p-6 rounded-xl shadow-xl hidden md:block">
+                            <p class="text-primary font-bold text-4xl mb-1">2+</p>
+                            <p class="text-gray-300 text-sm">Anos de Histórico</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                            A <span class="text-primary">Supershocke</span> é sua oficina de confiança em Cabo Frio
+                        </h2>
+                        <p class="text-gray-400 mb-6 text-lg leading-relaxed">
+                            Há 2 anos, a Supershocke nasceu com o objetivo de oferecer um serviço automotivo transparente, técnico e sem enrolação. Sabemos que a rotina na Região dos Lagos exige um carro confiável, por isso unimos manutenção mecânica, reparo elétrico e limpeza profissional em um só lugar.
+                        </p>
+                        <p class="text-gray-400 mb-10 text-lg leading-relaxed">
+                            Nosso compromisso é com a sua segurança e o bom desempenho do seu veículo. Seja para uma revisão preventiva ou um reparo urgente, nossa equipe está preparada para resolver o problema de forma clara, garantindo que você saiba exatamente o que está sendo feito no seu carro.
+                        </p>
+                        <a href="https://wa.me/5522997669294" target="_blank" class="inline-flex px-8 py-4 bg-card border border-gray-700 text-white rounded-lg font-bold text-lg hover:border-primary hover:text-primary transition-all items-center gap-2">
+                            Fale conosco
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Serviços -->
+        <section id="servicos" class="py-24 bg-card border-y border-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                        Serviços automotivos <span class="text-gradient">completos</span> para o seu carro
+                    </h2>
+                    <p class="text-gray-400 text-lg">Especialidade, técnica e ferramentas de ponta para cuidar de cada detalhe do seu veículo.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-dark border border-gray-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                        <img src="/assets/img/servico-1.webp" alt="Serviço de Mecânica Automotiva Geral e Manutenção de Motores na Supershocke" class="w-full h-56 object-cover opacity-80 group-hover:opacity-100 transition-opacity" loading="lazy">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4">Mecânica Automotiva Geral</h3>
+                            <p class="text-gray-400 mb-8 leading-relaxed">Realizamos revisões completas e manutenções corretivas focadas na performance do seu motor e segurança. Diagnóstico preciso para você não gastar com o que não precisa.</p>
+                            <a href="https://wa.me/5522997669294" target="_blank" class="text-primary font-semibold hover:text-primaryHover inline-flex items-center gap-2 transition-colors">
+                                Falar no WhatsApp
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark border border-gray-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                        <img src="/assets/img/servico-2.webp" alt="Serviço de Elétrica Veicular e Diagnóstico Automotivo Avançado" class="w-full h-56 object-cover opacity-80 group-hover:opacity-100 transition-opacity" loading="lazy">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4">Elétrica Veicular</h3>
+                            <p class="text-gray-400 mb-8 leading-relaxed">Problemas na bateria, alternador, luzes do painel ou chicotes elétricos? Nossa equipe de eletricistas automotivos resolve qualquer pane com agilidade.</p>
+                            <a href="https://wa.me/5522997669294" target="_blank" class="text-primary font-semibold hover:text-primaryHover inline-flex items-center gap-2 transition-colors">
+                                Falar no WhatsApp
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark border border-gray-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 group">
+                        <img src="/assets/img/servico-3.webp" alt="Lavagem Automotiva Profissional e Limpeza Técnica de Estofados" class="w-full h-56 object-cover opacity-80 group-hover:opacity-100 transition-opacity" loading="lazy">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4">Lavagem Automotiva Profissional</h3>
+                            <p class="text-gray-400 mb-8 leading-relaxed">Mais que uma lavagem, cuidamos da estética do seu veículo. Limpeza técnica de lataria e estofados para deixar seu carro com cara de novo.</p>
+                            <a href="https://wa.me/5522997669294" target="_blank" class="text-primary font-semibold hover:text-primaryHover inline-flex items-center gap-2 transition-colors">
+                                Falar no WhatsApp
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center bg-dark p-10 rounded-2xl border border-gray-800 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-primary/5"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-white mb-4">Precisa de um diagnóstico rápido?</h3>
+                        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Clique abaixo e fale com nossa equipe. Retornamos rapidamente com a melhor solução para o seu caso.</p>
+                        <a href="https://wa.me/5522997669294" target="_blank" class="inline-flex px-8 py-4 bg-primary text-black rounded-lg font-bold text-lg hover:bg-primaryHover transition-all shadow-lg hover:scale-105">
+                            Consultar orçamento via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Benefícios -->
+        <section id="beneficios" class="py-24 relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/3">
+                        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                            Por que a <span class="text-primary">Supershocke</span> é a escolha certa para você?
+                        </h2>
+                        <img src="/assets/img/beneficios.webp" alt="Mecânico da Supershocke realizando manutenção com garantia de 90 dias em Cabo Frio" class="rounded-2xl border border-gray-800 object-cover w-full h-[400px] mt-8" loading="lazy">
+                    </div>
+                    
+                    <div class="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+                        <div class="bg-card p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Garantia de 90 dias</h3>
+                            <p class="text-gray-400 leading-relaxed">Segurança total para você rodar tranquilo após a manutenção.</p>
+                        </div>
+                        
+                        <div class="bg-card p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Atendimento sem complicação</h3>
+                            <p class="text-gray-400 leading-relaxed">Explicamos o problema técnico de forma simples, sem termos confusos.</p>
+                        </div>
+
+                        <div class="bg-card p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Agilidade na entrega</h3>
+                            <p class="text-gray-400 leading-relaxed">Sabemos que você precisa do seu carro. Focamos em um processo rápido e eficiente.</p>
+                        </div>
+
+                        <div class="bg-card p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Tudo em um só lugar</h3>
+                            <p class="text-gray-400 leading-relaxed">Da parte elétrica à lavagem, cuidamos de todos os detalhes do seu veículo.</p>
+                        </div>
+
+                        <div class="bg-card p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors sm:col-span-2">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Localização estratégica</h3>
+                            <p class="text-gray-400 leading-relaxed">Oficina de fácil acesso na Rua Canário, atendendo toda Cabo Frio e região.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Como Funciona -->
+        <section id="como-funciona" class="py-24 bg-card border-y border-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">Como funciona nosso atendimento</h2>
+                    <p class="text-gray-400 text-lg">Um processo simples e transparente para você resolver o problema do seu carro sem dor de cabeça.</p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8 relative">
+                    <!-- Connector line -->
+                    <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-800 z-0"></div>
+                    
+                    <div class="relative z-10 text-center">
+                        <div class="w-24 h-24 mx-auto bg-dark border-2 border-primary rounded-full flex items-center justify-center text-3xl font-bold text-primary mb-6 shadow-[0_0_15px_rgba(251,191,36,0.2)]">1</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Agendamento</h3>
+                        <p class="text-gray-400 text-sm">Entre em contato pelo WhatsApp e nos conte qual o problema ou serviço desejado.</p>
+                    </div>
+
+                    <div class="relative z-10 text-center">
+                        <div class="w-24 h-24 mx-auto bg-dark border-2 border-primary rounded-full flex items-center justify-center text-3xl font-bold text-primary mb-6 shadow-[0_0_15px_rgba(251,191,36,0.2)]">2</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Diagnóstico Técnico</h3>
+                        <p class="text-gray-400 text-sm">Trazendo o veículo, realizamos uma avaliação detalhada para identificar a causa real.</p>
+                    </div>
+
+                    <div class="relative z-10 text-center">
+                        <div class="w-24 h-24 mx-auto bg-dark border-2 border-primary rounded-full flex items-center justify-center text-3xl font-bold text-primary mb-6 shadow-[0_0_15px_rgba(251,191,36,0.2)]">3</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Orçamento Transparente</h3>
+                        <p class="text-gray-400 text-sm">Explicamos o que precisa ser feito, o valor e prazo. Nada é feito sem sua aprovação.</p>
+                    </div>
+
+                    <div class="relative z-10 text-center">
+                        <div class="w-24 h-24 mx-auto bg-dark border-2 border-primary rounded-full flex items-center justify-center text-3xl font-bold text-primary mb-6 shadow-[0_0_15px_rgba(251,191,36,0.2)]">4</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Entrega Garantida</h3>
+                        <p class="text-gray-400 text-sm">Executamos o serviço com qualidade e entregamos seu carro revisado e limpo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Depoimentos -->
+        <section id="depoimentos" class="py-24 relative">
+            <div class="absolute inset-0 bg-[url('/assets/img/pattern.svg')] opacity-5"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-16">O que nossos clientes dizem</h2>
+                    
+                    <div class="bg-card p-10 md:p-16 rounded-3xl border border-gray-800 relative">
+                        <svg class="absolute top-8 left-8 w-12 h-12 text-primary/20" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        
+                        <p class="text-xl md:text-2xl text-gray-300 font-medium italic mb-8 relative z-10">
+                            "Nosso foco é construir uma relação de confiança com cada cliente. Em dois anos de Supershocke, priorizamos sempre a transparência no diagnóstico e a entrega do veículo dentro do prazo prometido. A satisfação de quem confia na gente é o que move nosso trabalho."
+                        </p>
+                        
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center font-bold text-dark text-xl">S</div>
+                            <div class="text-left">
+                                <h3 class="text-white font-bold">Equipe Supershocke</h3>
+                                <p class="text-gray-500 text-sm">Cabo Frio - RJ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Área de Atuação -->
+        <section id="area-atuacao" class="py-0">
+            <div class="flex flex-col lg:flex-row h-full">
+                <div class="lg:w-1/2 p-12 lg:p-24 bg-card flex flex-col justify-center">
+                    <h2 class="text-4xl font-bold text-white mb-6">Centro automotivo em Cabo Frio e Região dos Lagos</h2>
+                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                        Atendemos toda a cidade de Cabo Frio, com foco especial na região próxima à Rua Canário. Se você busca um mecânico de confiança, serviço de elétrica veicular ou uma lavagem de qualidade, somos a referência para quem mora ou transita pela Região dos Lagos.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-dark rounded-lg flex items-center justify-center text-primary shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <strong class="block text-white">Endereço</strong>
+                                <span class="text-gray-400">Rua Canário, S/N – Cabo Frio, RJ</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-dark rounded-lg flex items-center justify-center text-primary shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <strong class="block text-white">Horário</strong>
+                                <span class="text-gray-400">Segunda a Sexta, das 07:00 às 17:00</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-dark rounded-lg flex items-center justify-center text-primary shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <strong class="block text-white">Telefone/WhatsApp</strong>
+                                <span class="text-gray-400">(22) 99766-9294</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 min-h-[400px] bg-gray-900 relative">
+                    <!-- Mapa Placeholder (Google Maps Iframe ficaria aqui) -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-800 text-gray-500 flex-col gap-4">
+                        <svg class="w-16 h-16 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                        <span>[Iframe do Google Maps - Substituir manualmente]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ -->
+        <section id="faq" class="py-24 border-y border-gray-800">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4">Dúvidas frequentes sobre serviços automotivos</h2>
+                    <p class="text-gray-400">Tudo o que você precisa saber antes de trazer seu carro para a oficina.</p>
+                </div>
+
+                <div class="space-y-4" x-data="{ active: null }">
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 1 ? active = 1 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">Como posso agendar um serviço?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 1" x-collapse class="px-6 pb-5 text-gray-400">
+                            O agendamento é feito diretamente pelo nosso WhatsApp (22) 99766-9294. É rápido e prático.
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 2 ? active = 2 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">Quanto tempo o carro precisa ficar na oficina?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 2" x-collapse class="px-6 pb-5 text-gray-400">
+                            Depende do serviço. No momento do diagnóstico, damos uma estimativa real do prazo para você não ter surpresas.
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 3 ? active = 3 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">Vocês aceitam cartão?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 3" x-collapse class="px-6 pb-5 text-gray-400">
+                            Sim, aceitamos as principais bandeiras de cartão para facilitar o seu pagamento.
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 4 ? active = 4 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">A oficina tem garantia?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 4 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 4" x-collapse class="px-6 pb-5 text-gray-400">
+                            Sim, oferecemos 90 dias de garantia em todos os nossos serviços realizados.
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 5 ? active = 5 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">Onde vocês ficam localizados?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 5 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 5" x-collapse class="px-6 pb-5 text-gray-400">
+                            Estamos na Rua Canário, S/N, atendendo toda Cabo Frio.
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 6 ? active = 6 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">Faz diagnóstico de elétrica?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 6 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 6" x-collapse class="px-6 pb-5 text-gray-400">
+                            Sim, somos especialistas em conserto de elétrica automotiva em Cabo Frio.
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 7 ? active = 7 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">Como funciona a lavagem automotiva?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 7 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 7" x-collapse class="px-6 pb-5 text-gray-400">
+                            Realizamos lavagem profissional e limpeza de estofados com produtos de alta qualidade.
+                        </div>
+                    </div>
+
+                    <div class="bg-card border border-gray-800 rounded-xl overflow-hidden">
+                        <button @click="active !== 8 ? active = 8 : active = null" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-bold text-lg text-white">Vocês atendem além de Cabo Frio?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform" :class="{ 'rotate-180': active === 8 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="active === 8" x-collapse class="px-6 pb-5 text-gray-400">
+                            Sim, atendemos clientes de toda a Região dos Lagos que buscam manutenção de confiança.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Contato (CTA Final) -->
+        <section id="contato" class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-primary/10"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 blur-[120px] rounded-full z-0"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">Precisa cuidar do seu carro hoje?</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Não deixe para depois a segurança do seu veículo. Fale com nossos técnicos agora mesmo, tire suas dúvidas e agende seu horário. Respondemos em poucos minutos!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://wa.me/5522997669294" target="_blank" class="px-8 py-4 bg-primary text-black rounded-lg font-bold text-lg hover:bg-primaryHover transition-all flex items-center gap-2 shadow-[0_0_30px_rgba(251,191,36,0.4)] hover:scale-105 w-full sm:w-auto justify-center">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                        Agendar pelo WhatsApp
+                    </a>
+                    <a href="tel:+5522997669294" class="px-8 py-4 bg-card border border-gray-600 text-white rounded-lg font-bold text-lg hover:bg-gray-800 transition-all flex items-center gap-2 w-full sm:w-auto justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        Ligar agora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. Footer -->
+    <footer class="bg-card pt-16 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-1">
+                    <span class="text-2xl font-heading font-bold text-white mb-4 block">Super<span class="text-primary">shocke</span></span>
+                    <p class="text-gray-400 text-sm mb-6">Mecânica, Elétrica e Lavagem de qualidade em Cabo Frio.</p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/diegosupershock" target="_blank" class="w-10 h-10 bg-dark rounded-full flex items-center justify-center text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-white font-bold mb-4">Navegação</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#servicos" class="text-gray-400 hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-primary transition-colors">Quem Somos</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-primary transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h2 class="text-white font-bold mb-4">Contato & Endereço</h2>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <span class="text-primary mt-1">📍</span> Rua Canário, S/N – Cabo Frio, RJ
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-primary">📱</span> WhatsApp: (22) 99766-9294
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-primary">⏰</span> Horário: Segunda a Sexta, das 07:00 às 17:00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center md:flex md:justify-between md:text-left text-sm text-gray-500">
+                <p>© 2026 Supershocke. Todos os direitos reservados.</p>
+                <p class="mt-2 md:mt-0">Desenvolvido por OFS Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5522997669294" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-2xl transition-all animate-float">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+</body>
+</html>
